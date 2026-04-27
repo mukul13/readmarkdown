@@ -34,6 +34,7 @@ It deliberately does **not** edit files, search across files, or watch the disk.
 
 - **Recursive scan** — walks every nested directory under the folder you pick.
 - **`.md` only** — non-Markdown files are ignored entirely. Sensible skip list for `node_modules`, `.git`, `target`, `dist`, `build`, `.next`, `.turbo`, `.cache`, `.vscode`, `.idea`, plus all dotdirs.
+- **Full-text search** — type in the sidebar to filter by filename or by content. Matched files show a snippet of the hit.
 - **Full GFM** — tables, task lists, fenced code with syntax highlighting, footnotes, autolinks.
 - **Refresh button** — re-scan the folder and re-read the current file (catches edits made elsewhere).
 - **Native, calm UI** — paper-warm light theme, automatic dark mode, generous reading width.
@@ -113,7 +114,7 @@ npm run tauri:build -- --target universal-apple-darwin
 
 ## Roadmap
 
-- [ ] Full-text search across all files.
+- [x] Full-text search across all files.
 - [ ] Recently opened folders.
 - [ ] Optional file-tree sidebar.
 - [ ] Live disk-watching.
