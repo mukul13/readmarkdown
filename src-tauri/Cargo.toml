@@ -1,10 +1,10 @@
 [package]
 name = "app"
-version = "0.1.0"
-description = "A Tauri App"
-authors = ["you"]
-license = ""
-repository = ""
+version = "0.2.0"
+description = "A focused Markdown reader for macOS."
+authors = ["Mukul Chaware"]
+license = "MIT"
+repository = "https://github.com/mukul13/readmarkdown"
 edition = "2021"
 rust-version = "1.77.2"
 
