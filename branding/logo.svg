@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024" width="1024" height="1024">
+  <defs>
+    <linearGradient id="paper" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#FAF9F6"/>
+      <stop offset="60%" stop-color="#F1EFE8"/>
+      <stop offset="100%" stop-color="#E8EFE9"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="0.5" cy="0.18" r="0.7">
+      <stop offset="0%" stop-color="rgba(255,255,255,0.55)"/>
+      <stop offset="100%" stop-color="rgba(255,255,255,0)"/>
+    </radialGradient>
+    <filter id="softShadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feGaussianBlur in="SourceAlpha" stdDeviation="6"/>
+      <feOffset dx="0" dy="6" result="shadow"/>
+      <feFlood flood-color="#1F1D1A" flood-opacity="0.10"/>
+      <feComposite in2="shadow" operator="in"/>
+      <feMerge>
+        <feMergeNode/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <!-- squircle background (Apple-style continuous corner) -->
+  <rect x="0" y="0" width="1024" height="1024" rx="229" ry="229" fill="url(#paper)"/>
+  <rect x="0" y="0" width="1024" height="1024" rx="229" ry="229" fill="url(#glow)"/>
+  <!-- inner hairline -->
+  <rect x="6" y="6" width="1012" height="1012" rx="223" ry="223" fill="none" stroke="#1F1D1A" stroke-opacity="0.07" stroke-width="2"/>
+
+  <!-- Stylised paper card behind glyph for depth -->
+  <g transform="translate(232, 220)" filter="url(#softShadow)">
+    <rect x="0" y="0" width="560" height="640" rx="48" ry="48" fill="#FFFFFF"/>
+    <!-- top fold corner -->
+    <path d="M 480 0 L 560 80 L 480 80 Z" fill="#EBE7DF"/>
+    <!-- ruled lines -->
+    <g stroke="#EBE7DF" stroke-width="6" stroke-linecap="round">
+      <line x1="68" y1="500" x2="492" y2="500"/>
+      <line x1="68" y1="546" x2="420" y2="546"/>
+    </g>
+  </g>
+
+  <!-- Centered glyph: bold M with sage down arrow -->
+  <g transform="translate(0, 30)">
+    <text x="438" y="640"
+          text-anchor="middle"
+          font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Inter', system-ui, sans-serif"
+          font-weight="700"
+          font-size="460"
+          fill="#1F1D1A"
+          letter-spacing="-22">M</text>
+
+    <!-- sage down arrow tucked to the right of the M -->
+    <g transform="translate(648, 540)" stroke="#6B8E7A" stroke-width="44" fill="none" stroke-linecap="round" stroke-linejoin="round">
+      <line x1="0" y1="-110" x2="0" y2="110"/>
+      <polyline points="-72,40 0,112 72,40"/>
+    </g>
+  </g>
+</svg>
